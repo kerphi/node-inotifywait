@@ -65,6 +65,7 @@ watch2.on('change', function (filename) {
 
 var watch3 = new Inotifywait("/my/dir", {
             recursive: true, // recurse sub folders
+            watchDirectory: true, // generate events also for directories
             excludes: ["\./\.git(.*)"], // exclusion regex patterns
             files: [".gitignore"], // explicit file paths to ignore
             events: ["create", "move", "delete"], // events to listen to
